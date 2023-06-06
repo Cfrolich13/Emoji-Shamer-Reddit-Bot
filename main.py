@@ -13,12 +13,16 @@ class redditBot:
     def findMatch(self, comment):
         if '🤓' in comment.body:
             print(comment.body)
+            self.makeReply(comment)
     
-    def cooledDown(self):
+    def commentUpvoteCheck(self):
         pass
     
-    def makeReply(self):
-        pass
+    def makeReply(self, comment):
+        try:
+            comment.reply('You used the forbidden emoji.')
+        except Exception as e:
+            print(e)
 
 bot = redditBot()
 
