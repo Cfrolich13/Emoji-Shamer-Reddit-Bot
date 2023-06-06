@@ -20,7 +20,7 @@ class redditBot:
     
     def makeReply(self, comment):
         try:
-            comment.reply('You used the forbidden emoji.')
+            comment.reply("You used the forbidden emoji. As I'm still in beta, I spared the downvote. You can thank me later.")
         except Exception as e:
             print(e)
 
