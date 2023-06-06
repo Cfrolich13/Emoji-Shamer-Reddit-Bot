@@ -9,7 +9,21 @@ reddit = praw.Reddit(
   user_agent    = "<EmojiShamerBot1.0>"
 )
 
+class redditBot:
+    def findMatch(self, comment):
+        if '🤓' in comment.body:
+            print(comment.body)
+    
+    def cooledDown(self):
+        pass
+    
+    def makeReply(self):
+        pass
+
+bot = redditBot()
+
 subreddit = reddit.subreddit("EmojiShamerBot")
 
 for comment in subreddit.stream.comments(skip_existing=True):
-    print(comment.body)
+    #print(comment.body)
+    bot.findMatch(comment)
